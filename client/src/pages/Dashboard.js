@@ -10,7 +10,7 @@ const Dashboard = () => {
 	const [isEditing, setIsEditing] = useState(false)
 
 	async function populateQuote() {
-		const req = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/quote`, {
+		const req = await fetch('http://localhost:1337/api/quote', {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -40,7 +40,7 @@ const Dashboard = () => {
 	async function updateQuote(event) {
 		event.preventDefault()
 
-		const req = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/quote`, {
+		const req = await fetch('http://localhost:1337/api/quote', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const Dashboard = () => {
 	async function clearQuote(event) {
 		event.preventDefault()
 
-		const req = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/quote`, {
+		const req = await fetch('http://localhost:1337/api/quote', {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
