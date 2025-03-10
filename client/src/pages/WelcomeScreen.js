@@ -5,7 +5,7 @@ import './styles.css';
 const WelcomeScreen = () => {
   return (
     <div className="container">
-      <h1>Welcome to Our Application</h1>
+      <h1>Welcome to My Quote Application</h1>
       <Link to="/login">
         <button>Login</button>
       </Link>
